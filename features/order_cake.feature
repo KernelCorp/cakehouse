@@ -10,6 +10,7 @@ Feature: Order cake
      And I should see input for "name"
      And I should see input for "email"
      And I should see input for "phone"
+     And I should see input for "image"
      And I should see check box for "subscription"
 
   Scenario fill form
