@@ -64,5 +64,10 @@ module Cakehouse
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #paperclip dafault
+    config.paperclip_defaults = { :convert_options => { :all => ' -interlace Line' } }
+
+    config.autoload_paths += Dir["#{Rails.root}/app/models/*/**/"]
   end
 end

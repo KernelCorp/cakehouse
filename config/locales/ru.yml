@@ -8,7 +8,17 @@ ru:
           few: "Покупателя"
           many: "Покупатели"
           other: "Покупателей"
+        cake_order:
+          zero: "Заказов тортов"
+          one: "Заказ торта"
+          few: "Заказа торта"
+          many: "Заказы тортов"
+          other: "Заказов тортов"
         attributes:
           customer:
             name: ФИО
             phone: Телефон
+          cake_order:
+            phone: Телефон
+            stuff: Начинка
+            customer: Покупатель
