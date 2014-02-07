@@ -1,0 +1,25 @@
+%h1
+  Новый заказ на торт
+%h2
+  Клиент:
+.block
+  ФИО:
+  = @customer.name
+.block
+  Телефон:
+  = @customer.phone
+.block
+  email:
+  = @customer.email
+
+%h2
+  Заказ
+.block
+  Начинка:
+  = @order.stuff
+.block
+  Фото:
+  %img{src: @order.photo.url }
+
+
+
