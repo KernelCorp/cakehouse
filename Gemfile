@@ -5,7 +5,7 @@ gem 'rails', '~>3.2.15'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'mysql2', '0.3.11'
 
 
 # Gems used only for assets and not required
@@ -38,7 +38,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', platform: :ruby
 
 # Deploy with Capistrano
 # gem 'capistrano'

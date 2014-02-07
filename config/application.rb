@@ -33,6 +33,9 @@ module Cakehouse
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.i18n.default_locale = :ru
+    config.i18n.locale = :ru
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -55,6 +58,9 @@ module Cakehouse
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
+    I18n.locale = :ru
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

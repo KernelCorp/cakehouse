@@ -1,0 +1,14 @@
+ru:
+  active_admin:
+    activerecord:
+      models:
+        customer:
+          zero: "Покупателей"
+          one: "Покупатель"
+          few: "Покупателя"
+          many: "Покупатели"
+          other: "Покупателей"
+        attributes:
+          customer:
+            name: ФИО
+            phone: Телефон
