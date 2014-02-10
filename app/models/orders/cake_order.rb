@@ -7,4 +7,5 @@ class CakeOrder < Order
                     },
                     :path => ':rails_root/public/system/images/:style/:filename',
                     :url => '/system/images/:style/:filename'
+
 end

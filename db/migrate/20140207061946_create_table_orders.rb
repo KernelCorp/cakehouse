@@ -5,6 +5,7 @@ class CreateTableOrders < ActiveRecord::Migration
       t.string :stuff
       t.attachment :photo
       t.references :customer
+      t.timestamps
     end
   end
 end
