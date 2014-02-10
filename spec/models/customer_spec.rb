@@ -1,6 +1,6 @@
-require '../spec_helper'
+require 'spec_helper'
 
-describe 'Customer' do
+describe Customer do
   it 'email presence' do
     customer = Customer.new email: nil
     customer.should_not be_valid
@@ -22,5 +22,4 @@ describe 'Customer' do
     customer = Customer.new email: '-foo@bar.bar'
     customer.should_not be_valid
   end
-
 end
