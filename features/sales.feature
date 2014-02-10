@@ -6,6 +6,6 @@ Feature: Sales
       And a customer with email: "second@example.com", subscription: "false"
     When I go to "/admin/sales/new"
      And I fill up input for name as "1"
-     And I click to "submit"
+     And I click to submit
     Then email:  "first@example.com" should received new email
-     But email:  "first@example.com" shouldn't received new email
+     But email:  "second@example.com" shouldn't received new email

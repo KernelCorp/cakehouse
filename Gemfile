@@ -9,7 +9,8 @@ gem 'mysql2', '0.3.11'
 gem 'haml-rails'
 
 gem 'activeadmin'
-
+gem 'tinymce-rails'
+gem 'activeadmin_tinymce'
 
 # Gems used only for assets and not required
 # in production environments by default.
