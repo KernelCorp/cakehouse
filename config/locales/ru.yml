@@ -90,6 +90,12 @@ ru:
         few: "Акции"
         many: "Акции"
         other: "Акций"
+      sale_order:
+        zero: "Заказов акций"
+        one: "Заказ акции"
+        few: "Заказа акций"
+        many: "Заказы акций"
+        other: "Заказов акций"
     attributes:
       customer:
         name: ФИО
@@ -108,5 +114,7 @@ ru:
         description: Описание
         created_at: Создан
         updated_at: Обновлен
+      sale_order:
+        sale: Акция
 
 
