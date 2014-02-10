@@ -1,6 +1,6 @@
 require '../spec_helper'
 
-describe 'customer model' do
+describe 'Customer' do
   it 'email presence' do
     customer = Customer.new email: nil
     customer.should_not be_valid

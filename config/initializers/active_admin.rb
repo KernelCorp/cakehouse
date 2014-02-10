@@ -209,6 +209,7 @@ ActiveAdmin.setup do |config|
   #
   # config.filters = true
 
+
   ActiveAdmin::Views::Pages::Base.class_eval do
     private
     def build_footer

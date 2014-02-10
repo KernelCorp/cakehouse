@@ -5,7 +5,8 @@ class CakeOrdersController < ApplicationController
       customer.update_attributes params[:order][:customer]
       customer.save!
       cake_order = CakeOrder.create! stuff: params[:order][:stuff], photo: params[:order][:photo]
-      customer.orders.push cake_order
+      #customer.orders.push cake_order
+      cake_order.customer = customer
       @mail = AdminMailer.order(customer, cake_order).deliver
       head :ok
     else
