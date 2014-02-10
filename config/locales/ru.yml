@@ -84,7 +84,12 @@ ru:
         few: "Администратора"
         many: "Администраторы"
         other: "Администраторов"
-      comment:
+      sale:
+        zero: "Акций"
+        one: "Акция"
+        few: "Акции"
+        many: "Акции"
+        other: "Акций"
     attributes:
       customer:
         name: ФИО
@@ -97,4 +102,11 @@ ru:
         customer: Покупатель
         id: Номер
         created_at: Создан
+      sale:
+        name: Название
+        photo: Фото
+        description: Описание
+        created_at: Создан
+        updated_at: Обновлен
+
 
