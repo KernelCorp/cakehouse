@@ -119,6 +119,13 @@
           Наши торты
 
   #cake-slider
+    #wrapper
+      #cake-slider-inner
+        - GalleryImage.all.each_slice(8) do |slice|
+          .one-slide
+            - slice.each do |image|
+              .image
+                %img{src: image.attachment.url(:small)}
 
 
   #feedback-block
