@@ -4,6 +4,8 @@ Cakehouse::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  root to: 'homepage#index'
+  
   resources :cake_orders, only: [:create]
   resources :sale_orders, only: [:create]
   resources :pages, only: [:show]
