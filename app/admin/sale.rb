@@ -1,4 +1,16 @@
 ActiveAdmin.register Sale do
+
+  controller do
+    def create
+      super
+      subscribers = Customer.where delivery: true
+      subscribers.each_slice(998) do |slice|
+        slice = slice.map {|elem| elem.email}
+        AdminMailer.sales_delivery(slice).deliver
+      end
+    end
+  end
+
   show do |sale|
     attributes_table do
       row :name

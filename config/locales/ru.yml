@@ -116,5 +116,6 @@ ru:
         updated_at: Обновлен
       sale_order:
         sale: Акция
+        customer: Покупатель
 
 

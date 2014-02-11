@@ -14,4 +14,10 @@ class AdminMailer < ActionMailer::Base
     @order = order
     mail subject: 'Новый заказ на акцию'
   end
+
+  def sales_delivery(slice)
+    @sale = Sale.all.last
+    mail subject: 'Новая акция на cakehouse.ru',
+         bcc: slice
+  end
 end
