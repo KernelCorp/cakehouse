@@ -11,8 +11,5 @@ class CakeOrdersController < ApplicationController
     customer.cake_orders.push cake_order
     @mail = AdminMailer.cake_order(customer, cake_order).deliver
     head :ok
-
-    #@customer.update_attributes phone: params[:customer][:phone], name: params[:customer][:name]
-    #head :ok
   end
 end

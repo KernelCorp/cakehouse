@@ -12,6 +12,8 @@ gem 'activeadmin'
 gem 'tinymce-rails'
 gem 'activeadmin_tinymce'
 
+gem 'friendly_id', '~> 4.0.10'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

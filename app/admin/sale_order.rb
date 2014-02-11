@@ -13,6 +13,7 @@ ActiveAdmin.register SaleOrder do
     selectable_column
     column :customer
     column :sale
+    default_actions
   end
 
   form do |f|

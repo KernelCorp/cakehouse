@@ -33,6 +33,7 @@ ActiveAdmin.register Sale do
       image_tag sale.photo.url(:thumb)
     end
     column :created_at
+    default_actions
   end
 
   form do |f|

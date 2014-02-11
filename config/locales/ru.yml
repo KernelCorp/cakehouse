@@ -96,6 +96,12 @@ ru:
         few: "Заказа акций"
         many: "Заказы акций"
         other: "Заказов акций"
+      page:
+        zero: "Страниц"
+        one: "Страница"
+        few: "Страницы"
+        many: "Страницы"
+        other: "Страниц"
     attributes:
       customer:
         name: ФИО
@@ -117,5 +123,9 @@ ru:
       sale_order:
         sale: Акция
         customer: Покупатель
+      page:
+        title: Заголовок
+        body: Содержание
+
 
 
