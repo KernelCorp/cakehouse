@@ -12,7 +12,7 @@
           %a{href: '#header'}
             Наши торты
         %li.logo>
-          %img{src: '/assets/logo.png', alt: 'Cakehouse'}
+          %img{src: '/images/logo.png', alt: 'Cakehouse'}
         %li>
           %a{href: '#header'}
             Отзывы
@@ -27,9 +27,9 @@
 #slider
   %ul.bxslider
     %li
-      %img{src: '/assets/test-tort.png'}
+      %img{src: '/images/test-tort.png'}
     %li
-      %img{src: '/assets/test-tort.png'}
+      %img{src: '/images/test-tort.png'}
 
 #content-container
 
@@ -133,10 +133,30 @@
 
   #events-block
     #events
+      #events-logo
+        %img{src: '/images/events.png', alt: 'Акции'}
 
   #maps
 
   #contacts-block
     #contacts
-
-
+      .title
+        Наши контакты
+      .c-content
+        Новосибирск, ул.Восход 32
+        %br
+        (вход через кафе “Сельская лавка”)
+        #phone-block
+          #phone-title>
+            телефоны:
+          #phones>
+            +7 913 939-42-23
+            %br
+            +7 (383) 375-20-56
+        #email
+          email: like@cakehouse.me
+        #social-icons
+          %a{href: '#whatis'}
+            #icon-1.social-icon>
+          %a{href: '#whatis'}
+            #icon-2.social-icon>
