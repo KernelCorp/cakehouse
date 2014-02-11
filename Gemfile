@@ -6,8 +6,13 @@ gem 'rails', '~>3.2.15'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.3.11'
-gem 'jquery-rails'
 gem 'haml-rails'
+
+gem 'activeadmin'
+gem 'tinymce-rails'
+gem 'activeadmin_tinymce'
+
+gem 'friendly_id', '~> 4.0.10'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,11 +28,16 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'email_spec'
 end
+
+
+gem 'jquery-rails', '~> 2.3.0'
+gem 'paperclip', '~> 3.5.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,7 +46,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn', platforms: :ruby
+gem 'unicorn', platform: :ruby
 
 # Deploy with Capistrano
 # gem 'capistrano'

@@ -1,0 +1,131 @@
+ru:
+  active_admin:
+    dashboard: "Панель управления"
+    dashboard_welcome:
+      welcome: "Добро пожаловать в Active Admin. Это стандартная страница управления сайтом."
+      call_to_action: "Чтобы добавить сюда что-нибудь загляните в 'app/admin/dashboards.rb'"
+    view: "Открыть"
+    edit: "Изменить"
+    delete: "Удалить"
+    delete_confirmation: "Вы уверены, что хотите удалить это?"
+    new_model: "Создать"
+    create_model: "Создать %{model}"
+    edit_model: "Изменить"
+    update_model: "Изменить %{model}"
+    delete_model: "Удалить"
+    details: "Подробнее"
+    cancel: "Отмена"
+    empty: "Пусто"
+    previous: "Пред."
+    next: "След."
+    download: "Загрузка:"
+    has_many_new: "Добавить %{model}"
+    has_many_delete: "Удалить"
+    filter: "Фильтровать"
+    clear_filters: "Очистить"
+    search_field: "Искать по %{field}"
+    equal_to: "="
+    greater_than: "больше"
+    less_than: "меньше"
+    main_content: "Создайте %{model}#main_content для отображения содержимого."
+    logout: "Выйти"
+    sidebars:
+      filters: "Фильтры"
+    pagination:
+      empty: "%{model} не найдено"
+      one: "Результат: <b>1</b> %{model}"
+      one_page: "Результат: <b>%{n}</b> %{model}"
+      multiple: "Результат: %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> из <b>%{total}</b>"
+      entry:
+        one: "запись"
+        other: "записей"
+    any: "Любой"
+    blank_slate:
+      content: "Пока нет %{resource_name}."
+      link: "Создать"
+    comments:
+      body: "Текст"
+      author: "Автор"
+      title: "Комментарий"
+      add: "Добавить Комментарий"
+      resource: "Ресурс"
+      no_comments_yet: "Пока нет комментариев."
+      title_content: "Комментарии (%{count})"
+      errors:
+        empty_text: "Комментарий не сохранен, текст не должен быть пустым."
+    deliveries: "Рассылка"
+  add_images: "Добавить избражения для карусели"
+  add_shopping_images: "Добавить избражения товаров"
+  add_horizontal_images: "Добавить изображения для горизонтальной карусели"
+  formtastic:
+    :create: "Создать"
+    :update: "Изменить"
+  time:
+    formats:
+      long: ! '%d.%m.%y'
+
+  activerecord:
+    models:
+      customer:
+        zero: "Покупателей"
+        one: "Покупатель"
+        few: "Покупателя"
+        many: "Покупатели"
+        other: "Покупателей"
+      cake_order:
+        zero: "Заказов тортов"
+        one: "Заказ торта"
+        few: "Заказа торта"
+        many: "Заказы тортов"
+        other: "Заказов тортов"
+      admin_user:
+        zero: "Администраторов"
+        one: "Администратор"
+        few: "Администратора"
+        many: "Администраторы"
+        other: "Администраторов"
+      sale:
+        zero: "Акций"
+        one: "Акция"
+        few: "Акции"
+        many: "Акции"
+        other: "Акций"
+      sale_order:
+        zero: "Заказов акций"
+        one: "Заказ акции"
+        few: "Заказа акций"
+        many: "Заказы акций"
+        other: "Заказов акций"
+      page:
+        zero: "Страниц"
+        one: "Страница"
+        few: "Страницы"
+        many: "Страницы"
+        other: "Страниц"
+    attributes:
+      customer:
+        name: ФИО
+        phone: Телефон
+        created_at: Создан
+        updated_at: Обновлен
+      cake_order:
+        photo: Фото
+        stuff: Начинка
+        customer: Покупатель
+        id: Номер
+        created_at: Создан
+      sale:
+        name: Название
+        photo: Фото
+        description: Описание
+        created_at: Создан
+        updated_at: Обновлен
+      sale_order:
+        sale: Акция
+        customer: Покупатель
+      page:
+        title: Заголовок
+        body: Содержание
+
+
+
