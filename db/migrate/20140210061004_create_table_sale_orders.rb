@@ -1,8 +1,7 @@
 class CreateTableSaleOrders < ActiveRecord::Migration
   def change
-    create_table :sale_orders do |t|
-      t.references :sales
-      t.timestamps
+    change_table :orders do |t|
+      t.references :sale
     end
   end
 end

@@ -18,6 +18,7 @@ ActiveAdmin.register Customer do
     column :phone
     column :created_at
     column :updated_at
+    default_actions
   end
 
 end

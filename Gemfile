@@ -9,7 +9,10 @@ gem 'mysql2', '0.3.11'
 gem 'haml-rails'
 
 gem 'activeadmin'
+gem 'tinymce-rails'
+gem 'activeadmin_tinymce'
 
+gem 'friendly_id', '~> 4.0.10'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +32,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'email_spec'
 end
 
 
