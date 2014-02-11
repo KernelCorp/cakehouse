@@ -7,10 +7,12 @@ gem 'rails', '~>3.2.15'
 
 gem 'mysql2', '0.3.11'
 gem 'haml-rails'
+gem 'slim-rails'
 
 gem 'activeadmin'
 gem 'tinymce-rails'
 gem 'activeadmin_tinymce'
+gem 'activeadmin_images'
 
 gem 'friendly_id', '~> 4.0.10'
 

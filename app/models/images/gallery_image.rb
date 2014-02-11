@@ -1,0 +1,3 @@
+class GalleryImage < Image
+
+end

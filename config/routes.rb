@@ -1,6 +1,7 @@
 Cakehouse::Application.routes.draw do
 
   ActiveAdmin.routes(self)
+  mount ActiveAdmin::Tinymce::Engine => '/', as: 'admin_editor'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 

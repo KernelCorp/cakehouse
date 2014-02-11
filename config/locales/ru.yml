@@ -102,6 +102,18 @@ ru:
         few: "Страницы"
         many: "Страницы"
         other: "Страниц"
+      image:
+        zero: "Изображений"
+        one: "Изображение"
+        few: "Изображения"
+        many: "Изображения"
+        other: "Изображений"
+      gallery_image:
+        zero: "Изображений"
+        one: "Изображение"
+        few: "Изображения"
+        many: "Галерея"
+        other: "Изображений"
     attributes:
       customer:
         name: ФИО
@@ -126,6 +138,9 @@ ru:
       page:
         title: Заголовок
         body: Содержание
+      image:
+        title: Название
+        preview: Предпросмотр
 
 
 

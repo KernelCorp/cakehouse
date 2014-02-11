@@ -25,6 +25,9 @@ GEM
       meta_search (~> 1.0)
       rails (>= 3.0.0, < 4)
       sass (~> 3.1)
+    activeadmin_images (0.2.0)
+      activeadmin
+      rails (~> 3.2.13)
     activeadmin_tinymce (0.1.5)
       activeadmin
       rails (~> 3.2.13)
@@ -217,7 +220,7 @@ GEM
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
-    sprockets (2.2.2)
+    sprockets (2.2.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -254,6 +257,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  activeadmin_images
   activeadmin_tinymce
   capybara
   coffee-rails (~> 3.2.1)
@@ -269,6 +273,7 @@ DEPENDENCIES
   rails (~> 3.2.15)
   rspec-rails
   sass-rails (~> 3.2.3)
+  slim-rails
   therubyracer
   tinymce-rails
   uglifier (>= 1.0.3)
