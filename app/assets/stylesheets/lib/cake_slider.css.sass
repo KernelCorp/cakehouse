@@ -1,12 +1,27 @@
 #cake-slider
   padding-top: 160px
   .bx-wrapper
-    height: 500px
+    height: 450px
+    .bx-controls-direction
+      .bx-prev
+        left: 50px
+      .bx-next
+        right: 50px
   .bx-viewport
     background: transparent
   #cake-slider-inner
     .one-slide
-      .image, .image img
+      .pic-line
+        width: 990px
+        margin: auto
+        &:first-child
+          margin-bottom: 30px
+        .pop-up
+          text-decoration: none
+          margin-right: 30px
+          &:last-child
+            margin-right: 0
+      .pic-line img
         display: inline-block
       .image
         margin-right: 30px

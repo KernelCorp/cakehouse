@@ -121,11 +121,13 @@
   #cake-slider
     #wrapper
       #cake-slider-inner
-        - GalleryImage.all.each_slice(8) do |slice|
+        - GalleryImage.all.each_slice(8) do |slice8|
           .one-slide
-            - slice.each do |image|
-              .image
-                %img{src: image.attachment.url(:small)}
+            - slice8.each_slice(4) do |slice4|
+              .pic-line
+                - slice4.each do |image|
+                  %a.pop-up{href: image.attachment.url, rel: 'cakes-gallery'}
+                    %img{src: image.attachment.url(:small)}
 
 
   #feedback-block
