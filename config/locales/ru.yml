@@ -114,6 +114,13 @@ ru:
         few: "Изображения"
         many: "Галерея"
         other: "Изображений"
+      feedback:
+        zero: "Отзывов"
+        one: "Отзыв"
+        few: "Отзыва"
+        many: "Отзывы"
+        other: "Отзывов"
+
     attributes:
       customer:
         name: ФИО
@@ -141,6 +148,10 @@ ru:
       image:
         title: Название
         preview: Предпросмотр
-
+      feedback:
+        name: Имя
+        text: Текст
+        photo: Фото
+        created_at: Создан
 
 
