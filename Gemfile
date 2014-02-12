@@ -7,10 +7,12 @@ gem 'rails', '~>3.2.15'
 
 gem 'mysql2', '0.3.11'
 gem 'haml-rails'
+gem 'slim-rails'
 
 gem 'activeadmin'
 gem 'tinymce-rails'
 gem 'activeadmin_tinymce'
+gem 'activeadmin_images'
 
 gem 'friendly_id', '~> 4.0.10'
 
@@ -38,6 +40,7 @@ end
 
 gem 'jquery-rails', '~> 2.3.0'
 gem 'paperclip', '~> 3.5.2'
+gem 'fancybox2-rails', '~> 0.2.4'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
