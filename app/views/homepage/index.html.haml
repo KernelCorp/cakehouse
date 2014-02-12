@@ -139,6 +139,8 @@
           Наши торты
 
   #cake-slider
+    #cake-divider-top.divider
+    #cake-divider-bot.divider
     #wrapper
       #cake-slider-inner
         - GalleryImage.all.each_slice(8) do |slice8|
@@ -151,12 +153,30 @@
 
 
   #feedback-block
+    #feedback-divider-bot.divider
     #feedback
+      .title
+        Отзывы наших клиентов
+      #feedback-line
+      #feedback-slider
+        - Feedback.all.each_slice(3) do |slice|
+          .feeds
+            - slice.each do |feedback|
+              .feed-container
+                %img{src: feedback.photo.url(:small)}
+                .feed-name
+                  = feedback.name
+                .feed-text
+                  = feedback.text
 
   #events-block
+    #events-divider-bot.divider
     #events
       #events-logo
-        %img{src: '/images/events.png', alt: 'Акции'}
+        .title
+          Акции
+      #events-left
+        %img{src: '/images/event-cake.png'}
 
   #maps
 

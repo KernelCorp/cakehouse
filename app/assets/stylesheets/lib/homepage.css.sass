@@ -259,30 +259,71 @@
         position: relative
         z-index: 10
         height: 168px
-        width: 329px
-        background: url(/images/splitter-2.png)
+        width: 334px
+        background: url(/images/splitter-2.png) no-repeat right
         margin: 0 auto
         .title
           padding-top: 53px
+          margin-left: 5px
 
 
   #cake-slider
-    height: 710px
+    position: relative
+    height: 610px
     width: 100%
     background: url(/images/content-bg-1.png)
 
+    #cake-divider-top
+      background: url(/images/dividers.png) 0 -145px
+      top: 0
+    #cake-divider-bot
+      background: url(/images/curved-divider.png)
+      bottom: -9px
+      z-index: 5
+
   #feedback-block
-    height: 850px
+    position: relative
+    height: 830px
     width: 100%
+    background: url(/images/content-bg-2.png)
+
+    #feedback-divider-bot
+      bottom: 0
+      height: 50px
+      background: url(/images/curved-divider-2.png)
+
     #feedback
       width: 970px
       height: 100%
       margin: 0 auto
 
+      .title
+        color: #423a35
+        padding-top: 35px
+        padding-bottom: 20px
+
+      #feedback-line
+        margin: 0 auto
+        background: url(/images/feedback-line.png) no-repeat
+        height: 34px
+        width: 388px
+        padding-bottom: 20px
+
+      #feedback-slider
+        width: 100%
+        height: 560px
+
   #events-block
+    position: relative
     height: 670px
     width: 100%
     background: url(/images/content-bg-1.png)
+
+    #events-divider-bot
+      bottom: 0
+      height: 50px
+      background: url(/images/curved-divider-2.png)
+
     #events
       height: 100%
       width: 970px
@@ -293,6 +334,11 @@
         width: 357px
         margin: 0 auto
         padding-top: 50px
+        background: url(/images/events.png) no-repeat bottom
+        .title
+          color: #423a35
+          padding-top: 5px
+
 
   #maps
     height: 350px
