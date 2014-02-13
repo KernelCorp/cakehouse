@@ -106,12 +106,30 @@
 	background: url(/images/controls.png) no-repeat -90px -90px;
 }
 
+#feedback .bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(/images/controls2.png) no-repeat 0 -90px;
+}
+
+#feedback .bx-wrapper .bx-next {
+  right: 10px;
+  background: url(/images/controls2.png) no-repeat -90px -90px;
+}
+
 .bx-wrapper .bx-prev:hover {
 	background-position: 0 0;
 }
 
 .bx-wrapper .bx-next:hover {
 	background-position: -90px 0;
+}
+
+#feedback .bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+#feedback .bx-wrapper .bx-next:hover {
+  background-position: -90px 0;
 }
 
 .bx-wrapper .bx-controls-direction a {

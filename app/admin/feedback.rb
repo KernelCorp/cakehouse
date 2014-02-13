@@ -5,6 +5,7 @@ ActiveAdmin.register Feedback do
       row :photo do
         image_tag feedback.photo.url
       end
+      row :desc
       row :text do |feedback|
         raw feedback.text
       end
@@ -27,6 +28,7 @@ ActiveAdmin.register Feedback do
   form do |f|
     f.inputs do
       f.input :name
+      f.input :desc
       f.input :text
       f.input :photo, as: :file
     end

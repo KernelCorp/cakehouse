@@ -3,24 +3,24 @@
     %nav
       %ul
         %li>
-          %a{href: '#header'}
+          %a{href: '#whatis-block'}
             О нас
         %li>
-          %a{href: '#header'}
+          %a{href: '#fillings-block'}
             Начинки
         %li>
-          %a{href: '#header'}
+          %a{href: '#cake-slider'}
             Наши торты
         %li.logo>
           %img{src: '/images/logo.png', alt: 'Cakehouse'}
         %li>
-          %a{href: '#header'}
+          %a{href: '#feedback-block'}
             Отзывы
         %li>
-          %a{href: '#header'}
+          %a{href: '#events-block'}
             Акции
         %li>
-          %a{href: '#header'}
+          %a{href: '#contacts-block'}
             Контакты
   #nav-tail
 
@@ -160,25 +160,60 @@
       #feedback-line
       #feedback-slider
         - Feedback.all.each_slice(3) do |slice|
-          .feeds
-            - slice.each do |feedback|
-              .feed-container
-                %img{src: feedback.photo.url(:small)}
-                .feed-name
-                  = feedback.name
-                .feed-text
-                  = feedback.text
+          .feeds-one-slide
+            .feeds
+              - slice.each do |feedback|
+                .feed-container>
+                  .img-container
+                    %img{src: feedback.photo.url(:round)}
+                  .feed-name
+                    = feedback.name
+                  .feed-desc
+                    = feedback.desc
+                  .feed-text
+                    = raw feedback.text
 
   #events-block
+    - @sale = Sale.last
     #events-divider-bot.divider
     #events
-      #events-logo
+      #events-logo>
         .title
           Акции
-      #events-left
-        %img{src: '/images/event-cake.png'}
+      #events-pre>
+      #events-left>
+        .events-img-block
+          %img{src: @sale.photo.url(:for_main)}
+        .events-title
+          = @sale.name
+        .events-line
+        .events-text
+          = raw @sale.description
+      #events-right>
+        #make-order
+          Оставьте заявку
+        #order-form-block
+          = form_for Customer.new, remote: true, html: {class: 'inputs'} do |f|
+            .input-wrap
+              = f.text_field :name, type: 'text', placeholder: 'Ваше имя'
+            .input-wrap
+              = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+            .input-wrap
+              = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+            .button-wrap
+              = f.submit class: 'submit_button', value: 'Заказать торт'
+        #order-success
+          #success-text
+            Ваш заказ принят!
+            %br
+            В ближайшее время мы свяжемся с вами.
+        #data-is-safe
+          Ваши контактные данные в безопасности
+          и не будут переданы третьим лицам
 
-  #maps
+
+  #map-block
+    #map
 
   #contacts-block
     #contacts
@@ -202,3 +237,12 @@
             #icon-1.social-icon>
           %a{href: '#whatis'}
             #icon-2.social-icon>
+
+    #footer-block
+      #footer
+        %ul
+          - @menu.each do |page|
+            %li
+              %a{href: page.href}
+                = page.title
+

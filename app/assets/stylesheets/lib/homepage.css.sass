@@ -293,7 +293,7 @@
       background: url(/images/curved-divider-2.png)
 
     #feedback
-      width: 970px
+      width: 100%
       height: 100%
       margin: 0 auto
 
@@ -333,23 +333,133 @@
         height: 86px
         width: 357px
         margin: 0 auto
+        margin-bottom: 45px
         padding-top: 50px
         background: url(/images/events.png) no-repeat bottom
         .title
           color: #423a35
           padding-top: 5px
 
+      #events-pre
+        display: inline-block
+        vertical-align: top
+        height: 440px
+        width: 50px
 
-  #maps
+      #events-left
+        display: inline-block
+        vertical-align: top
+        width: 435px
+        height: 440px
+        color: #ffffff
+        .events-img-block
+          height: 250px
+          width: 250px
+          background: url(/images/event-cake.png) no-repeat
+          margin: 0 auto
+          margin-bottom: 10px
+          img
+            display: inline-block
+            margin-left: 32px
+            margin-top: 32px
+            border-radius: 93px
+            -webkit-border-radius: 93px
+            -moz-border-radius: 93px
+        .events-title
+          font-size: 30px
+          text-align: center
+        .events-line
+          height: 14px
+          width: 370px
+          margin: 8px auto
+          background: url(/images/event-line.png)
+        .events-text
+          text-align: center
+          font-size: 18px
+          p
+            margin: 0
+
+      #events-right
+        display: inline-block
+        vertical-align: top
+        width: 485px
+        height: 440px
+        color: #ffffff
+
+        #make-order
+          font-size: 24px
+          text-align: center
+          margin: 43px 0
+          margin-bottom: 15px
+
+        #order-form-block
+          width: 260px
+          height: 180px
+          margin: auto
+
+          .inputs
+            .input-wrap
+              margin: 10px auto
+
+              input
+                width: 260px
+                height: 30px
+                text-align: center
+                color: #1f2224
+                font-size: 18px
+                border: none
+                outline: none
+                border-radius: 15px
+                -webkit-border-radius: 93px
+                -moz-border-radius: 93px
+
+            .button-wrap
+              width: 200px
+              height: 30px
+              margin: 20px auto
+              input
+                width: 200px
+                height: 30px
+                background: #476653
+                color: #ffffff
+                text-align: center
+                font-size: 18px
+                border: none
+                outline: none
+                border-radius: 15px
+                -webkit-border-radius: 93px
+                -moz-border-radius: 93px
+
+        #order-success
+          display: none
+          height: 130px
+          width: 260px
+          margin: 0 auto
+          padding-top: 50px
+          #success-text
+            text-align: center
+            font-size: 24px
+
+        #data-is-safe
+          font-size: 14px
+          width: 235px
+          text-align: center
+          margin: 0 auto
+
+
+  #map-block
     height: 350px
     width: 100%
-    background: #555
+    #map
+      height: 100%
+      width: 100%
 
   #contacts-block
     height: 420px
     width: 100%
+    background: url(/images/contacts-bg.png)
     #contacts
-      height: 100%
+      height: 358px
       width: 970px
       margin: 0 auto
       color: #3b3129
@@ -383,6 +493,31 @@
           #icon-2
             background-position: -51px 0
             margin-left: 25px
+
+    #footer-block
+      width: 100%
+      height: 62px
+      background: url(/images/footer-bg.png)
+      #footer
+        position: relative
+        text-align: center
+        width: 970px
+        height: 100%
+        margin: 0 auto
+        ul
+          margin: 0 auto
+          padding: 0
+          li
+            list-style: none
+            display: inline-block
+            font-size: 24px
+            margin: 20px
+            margin-bottom: 0
+            a
+              color: #ffffff
+              text-decoration: none
+              &:hover
+                text-decoration: underline
 
 
 
