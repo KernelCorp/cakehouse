@@ -1,12 +1,17 @@
 Cakehouse::Application.routes.draw do
 
   ActiveAdmin.routes(self)
+  mount ActiveAdmin::Tinymce::Engine => '/', as: 'admin_editor'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  root to: 'homepage#index'
+  
   resources :cake_orders, only: [:create]
   resources :sale_orders, only: [:create]
   resources :pages, only: [:show]
+  resources :customers, only: [:create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

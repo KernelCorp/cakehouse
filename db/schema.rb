@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140210061004) do
+ActiveRecord::Schema.define(:version => 20140213055007) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +52,29 @@ ActiveRecord::Schema.define(:version => 20140210061004) do
     t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "delivery"
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.string   "name"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "text"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "desc"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "type"
   end
 
   create_table "orders", :force => true do |t|
@@ -64,13 +87,16 @@ ActiveRecord::Schema.define(:version => 20140210061004) do
     t.integer  "customer_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "sale_id"
   end
 
-  create_table "sale_orders", :force => true do |t|
-    t.integer  "sales_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "pages", :force => true do |t|
+    t.string "title", :null => false
+    t.string "slug",  :null => false
+    t.text   "body"
   end
+
+  add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
 
   create_table "sales", :force => true do |t|
     t.string   "name"

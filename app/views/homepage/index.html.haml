@@ -1,0 +1,248 @@
+#header
+  .nav-container
+    %nav
+      %ul
+        %li>
+          %a{href: '#whatis-block'}
+            О нас
+        %li>
+          %a{href: '#fillings-block'}
+            Начинки
+        %li>
+          %a{href: '#cake-slider'}
+            Наши торты
+        %li.logo>
+          %img{src: '/images/logo.png', alt: 'Cakehouse'}
+        %li>
+          %a{href: '#feedback-block'}
+            Отзывы
+        %li>
+          %a{href: '#events-block'}
+            Акции
+        %li>
+          %a{href: '#contacts-block'}
+            Контакты
+  #nav-tail
+
+#slider
+  %ul.bxslider
+    %li
+      %img{src: '/images/test-tort.png'}
+    %li
+      %img{src: '/images/test-tort.png'}
+
+#content-container
+
+  #whatis-block
+    #whatis-divider-top.divider
+    #whatis-divider-bot.divider
+    #whatis
+      #whatis-title.title
+        Что такое Cakehouse?
+      #whatis-1>
+        .w-pic
+          .img
+        .w-title
+          Никакой химии
+        .w-text
+          Мы готовим наши десерты без использования консервантов, улучшителей муки, разрахлителей и прочих вредных составляющих.
+          %br
+          Красители Итальянского производства на натуральной основе используются только для оформления тортов.
+      #whatis-2>
+        .w-pic
+          .img
+        .w-title
+          Уникальный дизайн
+        .w-text
+          Наши кондитеры воплотят в жизнь воплотить любую вашу сладкую фантазию, начиная с начинок и заканчивая самым замысловатым декором.
+          %br
+          Мы не знаем ограничений ни в форме, ни в палитре цвета!
+      #whatis-3>
+        .w-pic
+          .img
+        .w-title
+          Доставка тортов
+        .w-text
+          Мы с удовольствием доставим торт к вашему празднику.
+          %br
+          С условиями и стомостью доставки можно ознакомиться в соответствующем
+          %a{href:''}
+            разделе
+      #splitter-1
+        .title
+          Начинки
+
+  #fillings-block
+    #fillings
+      #t-1.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'Черёмуховый'
+          .tort-text
+            Бисквит из черемуховой муки с грецким орехом, пропитанный ванильным сиропом  с  ликером Малибу и взбитыми сливками.
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #t-2.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'Домашний'
+          .tort-text
+            Сметанный бисквит со сметанным кремом (орехи и фрукты на выбор).
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #t-3.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'Ванильный'
+          .tort-text
+            Бисквит с натуральной ванилью , курагой, черносливом и сливочным кремом.
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #t-4.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'Медовый'
+          .tort-text
+            Нежнейшие медовые коржи со сметанным кремом, приготовлен по классическому рецепту с натуральным медом.
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #t-5.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'Песочный'
+          .tort-text
+            Один из любимейших тортов, восхитительное сочетание песочных коржей с вишней (клубникой, черносливом, курагой, орехами, смородиной, клюквой) и сливочным кремом.
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #t-6.tort-block>
+        .tort-img>
+        .tort-content>
+          .tort-title
+            торт 'CakeHouse'
+          .tort-text
+            Бисквит из черемуховой муки с грецким орехом, пропитанный ванильным сиропом с ликером Малибу и взбитыми сливками.
+        .tort-order
+          %a{href: '#whatis'}
+            Заказать торт
+      #splitter-2
+        .title
+          Наши торты
+
+  #cake-slider
+    #cake-divider-top.divider
+    #cake-divider-bot.divider
+    #wrapper
+      #cake-slider-inner
+        - GalleryImage.all.each_slice(8) do |slice8|
+          .one-slide
+            - slice8.each_slice(4) do |slice4|
+              .pic-line
+                - slice4.each do |image|
+                  %a.pop-up{href: image.attachment.url, rel: 'cakes-gallery'}
+                    %img{src: image.attachment.url(:small)}
+
+
+  #feedback-block
+    #feedback-divider-bot.divider
+    #feedback
+      .title
+        Отзывы наших клиентов
+      #feedback-line
+      #feedback-slider
+        - Feedback.all.each_slice(3) do |slice|
+          .feeds-one-slide
+            .feeds
+              - slice.each do |feedback|
+                .feed-container>
+                  .img-container
+                    %img{src: feedback.photo.url(:round)}
+                  .feed-name
+                    = feedback.name
+                  .feed-desc
+                    = feedback.desc
+                  .feed-text
+                    = raw feedback.text
+
+  #events-block
+    - @sale = Sale.last
+    #events-divider-bot.divider
+    #events
+      #events-logo>
+        .title
+          Акции
+      #events-pre>
+      #events-left>
+        .events-img-block
+          %img{src: @sale.photo.url(:for_main)}
+        .events-title
+          = @sale.name
+        .events-line
+        .events-text
+          = raw @sale.description
+      #events-right>
+        #make-order
+          Оставьте заявку
+        #order-form-block
+          = form_for Customer.new, remote: true, html: {class: 'inputs'} do |f|
+            .input-wrap
+              = f.text_field :name, type: 'text', placeholder: 'Ваше имя'
+            .input-wrap
+              = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+            .input-wrap
+              = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+            .button-wrap
+              = f.submit class: 'submit_button', value: 'Заказать торт'
+        #order-success
+          #success-text
+            Ваш заказ принят!
+            %br
+            В ближайшее время мы свяжемся с вами.
+        #data-is-safe
+          Ваши контактные данные в безопасности
+          и не будут переданы третьим лицам
+
+
+  #map-block
+    #map
+
+  #contacts-block
+    #contacts
+      .title
+        Наши контакты
+      .c-content
+        Новосибирск, ул.Восход 32
+        %br
+        (вход через кафе “Сельская лавка”)
+        #phone-block
+          #phone-title>
+            телефоны:
+          #phones>
+            +7 913 939-42-23
+            %br
+            +7 (383) 375-20-56
+        #email
+          email: like@cakehouse.me
+        #social-icons
+          %a{href: '#whatis'}
+            #icon-1.social-icon>
+          %a{href: '#whatis'}
+            #icon-2.social-icon>
+
+    #footer-block
+      #footer
+        %ul
+          - @menu.each do |page|
+            %li
+              %a{href: page.href}
+                = page.title
+

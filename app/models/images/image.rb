@@ -1,10 +1,9 @@
-class Sale < ActiveRecord::Base
-  attr_accessible :name, :photo, :description
-  has_many :sale_orders
-  has_attached_file :photo,
+class Image < ActiveRecord::Base
+  attr_accessible :attachment
+  has_attached_file :attachment,
                     :styles => {
                         :thumb => ["50x50#", :png],
-                        :for_main => ["186x186#", :png]
+                        :small => ["221x221#", :png]
                     },
                     :path => ':rails_root/public/system/images/:style/:filename',
                     :url => '/system/images/:style/:filename'
