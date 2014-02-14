@@ -1,3 +1,41 @@
-%h1
-  = @page.title
-= raw @page.body
+#page-container
+  #header
+    .nav-container
+      %nav
+        %ul
+          %li>
+            %a{href: '/#whatis-block'}
+              О нас
+          %li>
+            %a{href: '/#fillings-block'}
+              Начинки
+          %li>
+            %a{href: '/#cake-slider'}
+              Наши торты
+          %li.logo>
+            %img{src: '/images/logo.png', alt: 'Cakehouse'}
+          %li>
+            %a{href: '/#feedback-block'}
+              Отзывы
+          %li>
+            %a{href: '/#events-block'}
+              Акции
+          %li>
+            %a{href: '/#contacts-block'}
+              Контакты
+    #nav-tail
+
+  #page-block
+    #page-content
+      .page-title
+        = @page.title
+      .page-text
+        = raw @page.body
+
+#footer-block.sticky-footer
+  #footer
+    %ul
+      - @menu.each do |page|
+        %li
+          %a{href: page.href}
+            = page.title
