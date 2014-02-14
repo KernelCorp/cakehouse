@@ -1,7 +1,6 @@
 ready = ->
-  $('.inputs').submit ->
-    $('#make-order').hide()
-    $('#order-form-block').hide()
+  $('#new_sale_order').submit ->
+    $(this).parent().hide()
     $('#order-success').show()
     return true
 $(document).ready ready

@@ -5,6 +5,7 @@ ActiveAdmin.register Sale do
       super
       subscribers = Customer.where delivery: true
       subscribers.each_slice(998) do |slice|
+        sleep(1)
         slice = slice.map {|elem| elem.email}
         AdminMailer.sales_delivery(slice).deliver
       end

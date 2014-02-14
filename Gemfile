@@ -35,6 +35,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'email_spec'
+  gem 'selenium-webdriver'
 end
 
 group :development do

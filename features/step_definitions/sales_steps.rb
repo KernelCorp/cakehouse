@@ -26,6 +26,7 @@ end
 
 When(/^I click to submit$/) do
   find('input[name=commit]').click
+  sleep(1)
 end
 
 #Then(/^email:  "(.*?)" should received new email$/) do |arg1|
