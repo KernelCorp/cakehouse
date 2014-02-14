@@ -60,3 +60,5 @@ require 'email_spec/cucumber'
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World(FactoryGirl::Syntax::Methods)
+require 'simplecov'
+SimpleCov.start
