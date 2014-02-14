@@ -37,6 +37,11 @@ group :test do
   gem 'email_spec'
 end
 
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'nginx-config'
+end
 
 gem 'jquery-rails', '~> 2.3.0'
 gem 'paperclip', '~> 3.5.2'
