@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: cakehouse_production
   pool: 5
-  username: root
-  password:
+  username: cakehouse
+  password: 99Ofjzgg
   socket: /var/run/mysqld/mysqld.sock
