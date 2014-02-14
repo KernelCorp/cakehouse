@@ -24,6 +24,29 @@
             Контакты
   #nav-tail
 
+.sticky
+  .nav-container
+    %nav
+      %ul
+        %li>
+          %a{href: '#whatis-block'}
+            О нас
+        %li>
+          %a{href: '#fillings-block'}
+            Начинки
+        %li>
+          %a{href: '#cake-slider'}
+            Наши торты
+        %li>
+          %a{href: '#feedback-block'}
+            Отзывы
+        %li>
+          %a{href: '#events-block'}
+            Акции
+        %li>
+          %a{href: '#contacts-block'}
+            Контакты
+
 #slider
   %ul.bxslider
     %li
@@ -33,7 +56,7 @@
 
 #content-container
 
-  #whatis-block
+  %section#whatis-block
     #whatis-divider-top.divider
     #whatis-divider-bot.divider
     #whatis
@@ -76,6 +99,7 @@
     .modal-shadow
     .modal-window
       = render :partial => 'modal_orders_content'
+  %section#fillings-block
     #fillings
       #t-1.tort-block>
         .tort-img>
@@ -141,7 +165,7 @@
         .title
           Наши торты
 
-  #cake-slider
+  %section#cake-slider
     #cake-divider-top.divider
     #cake-divider-bot.divider
     #wrapper
@@ -155,7 +179,7 @@
                     %img{src: image.attachment.url(:small)}
 
 
-  #feedback-block
+  %section#feedback-block
     #feedback-divider-bot.divider
     #feedback
       .title
@@ -176,7 +200,7 @@
                   .feed-text
                     = raw feedback.text
 
-  #events-block
+  %section#events-block
     - @sale = Sale.last
     #events-divider-bot.divider
     #events
@@ -222,7 +246,7 @@
           и не будут переданы третьим лицам
 
 
-  #map-block
+  %section#map-block
     #map
 
   #contacts-block
@@ -243,9 +267,9 @@
         #email
           email: like@cakehouse.me
         #social-icons
-          %a{href: '#whatis'}
+          %a{href: 'http://vk.com/club60073728'}
             #icon-1.social-icon>
-          %a{href: '#whatis'}
+          %a{href: 'http://instagram.com/cakehouseme'}
             #icon-2.social-icon>
 
     #footer-block
@@ -255,5 +279,4 @@
             %li
               %a{href: page.href}
                 = page.title
-
 
