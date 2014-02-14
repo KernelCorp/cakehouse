@@ -95,11 +95,10 @@
         .title
           Начинки
 
-  #fillings-block
+  %section#fillings-block
     .modal-shadow
     .modal-window
       = render :partial => 'modal_orders_content'
-  %section#fillings-block
     #fillings
       #t-1.tort-block>
         .tort-img>
@@ -220,7 +219,7 @@
         #make-order
           Оставьте заявку
         #order-form-block
-          = form_for SaleOrder.new, remote: true, html: {class: 'inputs'} do |f|
+          = form_for SaleOrder.new, remote: true, html: {class: 'inputs'}, remote: true do |f|
             = f.fields_for :customer do |customer|
               .input-wrap
                 = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
@@ -234,6 +233,9 @@
                   %label{for: "roundedTwo"}
                 %label.delivery
                   Хочу получать информация о новых акциях по email
+              .message-wrap{style: 'display: none'}
+                %p
+                  Введите, пожалуйста, корректный email
             .button-wrap
               = f.submit class: 'submit_button', value: 'Заказать торт'
         #order-success

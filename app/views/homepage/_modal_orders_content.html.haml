@@ -1,12 +1,31 @@
 #make-order
   Оставьте заявку
   #order-form-block
-    = form_for Customer.new, remote: true, html: {class: 'inputs'} do |f|
-      .input-wrap
-        = f.text_field :name, type: 'text', placeholder: 'Ваше имя'
-      .input-wrap
-        = f.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
-      .input-wrap
-        = f.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+    = form_for CakeOrder.new, remote: true, html: {class: 'inputs'} do |f|
+      = f.fields_for :customer do |customer|
+        .input-wrap
+          = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
+        .input-wrap
+          = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+        .input-wrap
+          = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+        .input-wrap
+          .roundedTwo
+            %input#sale_order_customer_delivery#roundedTwo{type: 'checkbox', value: 'None',  name: 'sale_order[customer][delivery]'}
+            %label{for: "roundedTwo"}
+          %label.delivery
+            Хочу получать информация о новых акциях по email
+        .message-wrap{style: 'display: none'}
+          %p
+            Введите, пожалуйста, корректный email
+        .input-wrap{style: 'display: none'}
+          = f.text_field :stuff, type: 'text'
       .button-wrap
         = f.submit class: 'submit_button', value: 'Заказать торт'
+  #order-success
+    #success-text
+      Ваш заказ принят!
+      %br
+      В ближайшее время мы свяжемся с вами.
+      %button.submit-button.close-modal
+        Ok

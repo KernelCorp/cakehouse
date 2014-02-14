@@ -36,6 +36,7 @@ group :test do
   gem 'capybara'
   gem 'email_spec'
   gem 'simplecov', require: false
+  gem 'selenium-webdriver'
 end
 
 group :development do
