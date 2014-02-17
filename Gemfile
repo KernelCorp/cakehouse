@@ -45,7 +45,7 @@ group :development do
   gem 'nginx-config'
 end
 
-gem 'jquery-rails', '~> 2.3.0'
+gem 'jquery-rails'
 gem 'paperclip', '~> 3.5.2'
 gem 'fancybox2-rails', '~> 0.2.4'
 
