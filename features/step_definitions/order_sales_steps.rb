@@ -32,7 +32,6 @@ And(/^I click to "(.*?)" in "(.*?)" form$/) do |attr, klass|
   sleep(1)
 end
 
-Then(/^I should see success$/) do
-  page.should have_css('#order-success')
-  #page.should have_css('#order-success')#, text: 'Ваш заказ принят! В ближайшее время мы свяжемся с вами.')
+Then(/^I should see success for "(.*?)"$/) do |klass|
+  page.should have_css("##{klass}-order-success.visible")
 end

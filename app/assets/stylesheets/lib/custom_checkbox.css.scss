@@ -47,7 +47,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
 }
 
-.roundedTwo label:after {
+.roundedTwo label:after{
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
 	opacity: 0;
@@ -81,5 +81,9 @@
 	opacity: 1;
 }
 #roundedTwo{
+	display: none;
+}
+
+#sale-check{
 	display: none;
 }

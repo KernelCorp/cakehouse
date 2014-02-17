@@ -21,5 +21,5 @@ Feature: Order sales
      And I fill up input "email" as "cakes@example.com" in "sale" form
      And I fill up input "phone" as "78901231234" in "sale" form
      And I click to "submit" in "sale" form
-    Then I should see success
+    Then I should see success for "sale"
      And "admin@gmail.com" should receive an email

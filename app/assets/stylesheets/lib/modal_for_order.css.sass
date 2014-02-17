@@ -21,6 +21,14 @@
   display: none
   z-index: 10000
   background: url(/images/content-bg-1.png)
+  #preview-block
+    height: 300px
+    width: 250px
+    display: inline-block
+    vertical-align: top
+    img
+      width: 250px
+
   #make-order
     font-size: 24px
     text-align: center
@@ -31,6 +39,8 @@
     width: 260px
     height: 180px
     margin: auto
+    display: inline-block
+    vertical-align: top
 
   .inputs
     .input-wrap
@@ -53,6 +63,7 @@
     height: 30px
     margin: 20px auto
     input
+      cursor: pointer
       width: 200px
       height: 30px
       background: #476653
@@ -65,18 +76,46 @@
       -webkit-border-radius: 93px
       -moz-border-radius: 93px
 
-  #order-success
+  #cake-order-success
     display: none
     height: 130px
     width: 260px
     margin: 0 auto
     padding-top: 50px
-  #success-text
-    text-align: center
-    font-size: 24px
+    #success-text
+      text-align: center
+      font-size: 24px
 
   #data-is-safe
     font-size: 14px
     width: 235px
     text-align: center
     margin: 0 auto
+.input-wrap#input-image
+  position: relative
+  cursor: pointer
+  width: 260px
+  height: 30px
+  background: #476653
+  color: #ffffff
+  text-align: center
+  font-size: 18px
+  border: none
+  outline: none
+  border-radius: 15px
+  -webkit-border-radius: 93px
+  -moz-border-radius: 93px
+  font-family: HattoriHanzo
+  font-size: 24px
+
+#cake_order_photo
+  opacity: 0
+  cursor: pointer
+  position: absolute
+  left: 0
+  top: 0
+
+label.delivery
+  font-size: 17px
+.message-wrap
+  font-size: 20px

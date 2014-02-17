@@ -229,8 +229,8 @@
                 = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
               .input-wrap
                 .roundedTwo
-                  %input#sale_order_customer_delivery#roundedTwo{type: 'checkbox', value: 'None',  name: 'sale_order[customer][delivery]'}
-                  %label{for: "roundedTwo"}
+                  %input#sale-check{type: 'checkbox',  name: 'sale_order[customer][delivery]'}
+                  %label{for: "sale-check"}
                 %label.delivery
                   Хочу получать информация о новых акциях по email
               .message-wrap{style: 'display: none'}
@@ -238,7 +238,7 @@
                   Введите, пожалуйста, корректный email
             .button-wrap
               = f.submit class: 'submit_button', value: 'Заказать торт'
-        #order-success
+        #sale-order-success
           #success-text
             Ваш заказ принят!
             %br
