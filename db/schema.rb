@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20140213055007) do
     t.integer  "customer_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "sale_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -96,12 +97,6 @@ ActiveRecord::Schema.define(:version => 20140213055007) do
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
-
-  create_table "sale_orders", :force => true do |t|
-    t.integer  "sales_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "sales", :force => true do |t|
     t.string   "name"
