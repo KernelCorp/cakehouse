@@ -36,6 +36,8 @@ group :test do
   gem 'capybara'
   gem 'email_spec'
   gem 'simplecov', require: false
+  gem 'rack'
+  gem 'coveralls', require: false
 end
 
 group :development do

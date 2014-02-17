@@ -5,3 +5,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Cakehouse::Application.load_tasks
+
+Coveralls::RakeTask.new
+task :test_with_coveralls => [:spec, :features, 'coveralls:push']
