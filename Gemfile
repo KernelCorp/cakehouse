@@ -37,6 +37,8 @@ group :test do
   gem 'email_spec'
   gem 'simplecov', require: false
   gem 'selenium-webdriver'
+  gem 'rack'
+  gem 'coveralls', require: false
 end
 
 group :development do

@@ -89,8 +89,7 @@
           Мы с удовольствием доставим торт к вашему празднику.
           %br
           С условиями и стомостью доставки можно ознакомиться в соответствующем
-          %a{href:''}
-            разделе
+          =link_to 'разделе', delivery_path
       #splitter-1
         .title
           Начинки
@@ -276,6 +275,11 @@
 
     #footer-block
       #footer
+        #copyright
+          © 2014 CakeHouse
+          разработано в
+          %a{href: 'http://kerweb.ru', target: '_blank'}
+            Kernel Web
         %ul
           - @menu.each do |page|
             %li

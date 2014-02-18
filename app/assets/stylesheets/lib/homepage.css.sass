@@ -187,17 +187,25 @@
           .tort-text
             font-size: 14px
             margin: 0 20px
-
-        .tort-order
-          position: absolute
-          right: 115px
-          bottom: 35px
-          a
-            text-decoration: none
-            font-size: 18px
+        a
+          text-decoration: none
+          font-size: 18px
+          &:hover
+            text-decoration: underline
+          .tort-order
+            position: absolute
+            height: 30px
+            width: 240px
+            right: 30px
+            bottom: 30px
+            border: 1px solid #ffffff
+            border-radius: 5px
+            text-align: center
+            line-height: 1.6
             &:hover
               text-decoration: underline
             cursor: pointer
+
 
 
       #t-1
@@ -208,6 +216,8 @@
           color: #ffffff
         .tort-content
           background: #999999
+        .tort-order
+          background: #6f456b
       #t-2
         background: url(/images/tort-bg-2.png) no-repeat center
         margin: 85px 0 20px 0
@@ -216,6 +226,10 @@
           color: #46171d
         .tort-content
           background: #f9d4d9
+        .tort-order
+          background: #6b4264
+          border-color: #f9d4d9
+          color: #edc4ec
         .tort-img
           background-position: -125px 0
       #t-3
@@ -226,16 +240,21 @@
           color: #3e2e1d
         .tort-content
           background: #decfb9
+        .tort-order
+          background: #fffbb7
+          border-color: #938570
+          color: #413526
         .tort-img
           background-position: -250px 0
       #t-4
         background: url(/images/tort-bg-4.png) no-repeat center
         margin: 0 0 20px 0
-        color: #4f655a
-        a
-          color: #4f655a
         .tort-content
           background: #f1e15d
+        .tort-order
+          background: #e96570
+          border-color: #aedcc6
+          color: #ffffff
         .tort-img
           background-position: -375px 0
       #t-5
@@ -246,6 +265,8 @@
           color: #ffffff
         .tort-content
           background: #574218
+        .tort-order
+          background: #261910
         .tort-img
           background-position: -500px 0
       #t-6
@@ -256,6 +277,10 @@
           color: #541d28
         .tort-content
           background: #e6cbbb
+        .tort-order
+          background: #541d28
+          border-color: #efe19b
+          color: #f2ef7b
         .tort-img
           background-position: -625px 0
 
@@ -398,6 +423,7 @@
 
         #order-form-block
           width: 260px
+          height: 180px
           margin: auto
 
           .inputs
@@ -415,17 +441,12 @@
                 border-radius: 15px
                 -webkit-border-radius: 93px
                 -moz-border-radius: 93px
-              label.delivery
-                display: inline-block
-                width: 200px
-                margin-left: 10px
 
             .button-wrap
               width: 200px
               height: 30px
               margin: 20px auto
               input
-                cursor: pointer
                 width: 200px
                 height: 30px
                 background: #476653
@@ -540,6 +561,18 @@
   -webkit-border-radius: 93px
   -moz-border-radius: 93px
   cursor: pointer
+
+    #copyright
+      position: absolute
+      width: 150px
+      right: 0
+      top: 15px
+      font-size: 14px
+      color: #3b3129
+      text-align: right
+      line-height: 1.4
+      a
+        color: #3b3129
 
 
 
