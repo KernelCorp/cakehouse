@@ -40,6 +40,13 @@ ready = ->
       $("nav a[href=\"#contacts-block\"]").addClass "active"
     return
 
+  $("nav a[href*=#]").bind "click", (e) ->
+    anchor = $(this)
+    $("html, body").stop().animate
+      scrollTop: $(anchor.attr("href")).offset().top, 1000
+    e.preventDefault()
+    return false
+
   return
 
 $(document).ready ready
