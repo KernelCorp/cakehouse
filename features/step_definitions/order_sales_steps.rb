@@ -20,7 +20,7 @@ And(/^I should see input for "(.*?)" in "(.*?)" form$/) do |attr, klass|
 end
 
 And(/^I should see check box for "(.*?)" in "(.*?)" form$/) do |attr, klass|
-  page.should have_css("input[name='#{klass}_order[customer][#{attr}]']")
+  page.should have_css(".roundedTwo")
 end
 
 And(/^I fill up input "(.*?)" as "(.*?)" in "(.*?)" form$/) do |attr, value, klass|

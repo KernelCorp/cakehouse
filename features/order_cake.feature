@@ -11,8 +11,8 @@ Feature: Order cake
      And I should see input for "name" in "cake" form
      And I should see input for "email" in "cake" form
      And I should see input for "phone" in "cake" form
-     And I should see input for "photo" in "cake" form for cake
-     And I should see check box for "subscription" in "cake" form
+     And I should see input for photo in cake form for cake
+     And I should see check box for "delivery" in "cake" form
   @javascript
   Scenario: fill form
     When I order "Home" cake
