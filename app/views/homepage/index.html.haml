@@ -3,21 +3,21 @@
     %nav
       %ul
         %li>
-          %a{href: '#whatis-block'}
+          %a{href: '#whatis-block-mark'}
             О нас
         %li>
-          %a{href: '#fillings-block'}
+          %a{href: '#fillings-block-mark'}
             Начинки
         %li>
-          %a{href: '#cake-slider'}
+          %a{href: '#cake-slider-mark'}
             Наши торты
         %li.logo>
           %img{src: '/images/logo.png', alt: 'Cakehouse'}
         %li>
-          %a{href: '#feedback-block'}
+          %a{href: '#feedback-block-mark'}
             Отзывы
         %li>
-          %a{href: '#events-block'}
+          %a{href: '#events-block-mark'}
             Акции
         %li>
           %a{href: '#contacts-block'}
@@ -29,19 +29,19 @@
     %nav
       %ul
         %li>
-          %a{href: '#whatis-block'}
+          %a{href: '#whatis-block-mark'}
             О нас
         %li>
-          %a{href: '#fillings-block'}
+          %a{href: '#fillings-block-mark'}
             Начинки
         %li>
-          %a{href: '#cake-slider'}
+          %a{href: '#cake-slider-mark'}
             Наши торты
         %li>
-          %a{href: '#feedback-block'}
+          %a{href: '#feedback-block-mark'}
             Отзывы
         %li>
-          %a{href: '#events-block'}
+          %a{href: '#events-block-mark'}
             Акции
         %li>
           %a{href: '#contacts-block'}
@@ -57,6 +57,7 @@
 #content-container
 
   %section#whatis-block
+    #whatis-block-mark.mark
     #whatis-divider-top.divider
     #whatis-divider-bot.divider
     #whatis
@@ -95,6 +96,7 @@
           Начинки
 
   %section#fillings-block
+    #fillings-block-mark.mark
     .modal-shadow
     .modal-window
       = render :partial => 'modal_orders_content'
@@ -159,11 +161,12 @@
         .tort-order
           %a.order-cake{'data-stuff' => 'CakeHouse'}
             Заказать торт
-      #splitter-2
+      #splitter-2.mark
         .title
           Наши торты
 
   %section#cake-slider
+    #cake-slider-mark.mark
     #cake-divider-top.divider
     #cake-divider-bot.divider
     #wrapper
@@ -178,6 +181,7 @@
 
 
   %section#feedback-block
+    #feedback-block-mark.mark
     #feedback-divider-bot.divider
     #feedback
       .title
@@ -198,8 +202,9 @@
                   .feed-text
                     = raw feedback.text
 
-  %section#events-block
+  %section#events-block.mark
     - @sale = Sale.last
+    #events-block-mark.mark
     #events-divider-bot.divider
     #events
       #events-logo>

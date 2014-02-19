@@ -25,7 +25,7 @@ ready = ->
     handler: (event, direction) ->
       active_section = $(this)
       active_section = active_section.prev()  if direction is "up"
-      active_link = $("nav a[href=\"#" + active_section.attr("id") + "\"]")
+      active_link = $("nav a[href=\"#" + active_section.attr("id") + "-mark" + "\"]")
       navigation_links.removeClass "active"
       if $(window).scrollTop() + $(window).height() is $(document).height()
         $("nav a[href=\"#contacts-block\"]").addClass "active"
