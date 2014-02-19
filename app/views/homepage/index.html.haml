@@ -176,8 +176,7 @@
             - slice8.each_slice(4) do |slice4|
               .pic-line
                 - slice4.each do |image|
-                  %a.pop-up{href: image.attachment.url, rel: 'cakes-gallery'}
-                    %img{src: image.attachment.url(:small)}
+                  %img{src: image.attachment.url(:small)}
 
 
   %section#feedback-block
@@ -236,7 +235,7 @@
                   %input#sale-check{type: 'checkbox',  name: 'sale_order[customer][delivery]'}
                   %label{for: "sale-check"}
                 %label.delivery
-                  Хочу получать информация о новых акциях по email
+                  Хочу получать информацию о новых акциях по email
               .message-wrap{style: 'display: none'}
                 %p
                   Введите, пожалуйста, корректный email
