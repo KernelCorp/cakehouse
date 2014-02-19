@@ -18,8 +18,53 @@
 
 .nav-container
   nav
+    position: relative
     width: 970px
     margin: 0 auto
+
+    #header-order
+      position: absolute
+      height: 103px
+      width: 250px
+      top: 0
+      right: 50px
+      background: url(/images/order-bg.png)
+      #header-phone-block
+        margin-top: 13px
+        font-size: 24px
+        #phone-icon
+          display: inline-block
+          height: 30px
+          width: 30px
+          background: url(/images/phone-icon.png)
+          margin-left: 20px
+        #header-phone
+          display: inline-block
+          vertical-align: top
+          margin-left: 8px
+          margin-top: 3px
+          width: 180px
+          a
+            color: #ffffff
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+      #header-order-button
+        height: 30px
+        width: 200px
+        background: #883921
+        border-radius: 15px
+        margin: 5px auto
+        cursor: pointer
+        text-align: center
+        font-size: 24px
+        &:hover
+          text-decoration: underline
+        a
+          display: block
+          height: 30px
+          border-radius: 15px
+
     ul
       display: block
       margin: 0
@@ -29,22 +74,24 @@
         vertical-align: top
         text-align: center
         width: auto
-        margin-top: 100px
-        margin-right: 38px
+        margin-top: 140px
+        margin-right: 55px
         list-style: none
         a
           text-decoration: none
           font:
             family: HattoriHanzo
-            size: 30px
+            size: 24px
             weight: light
             style: normal
           color: #ffffff
           border: none
           &:hover
             border-bottom: 2px solid #ffffff
+      li:first-child
+        margin-left: 10px
       li:last-child
-        margin-right: 0
+        margin-right: 10px
 
       li.logo
         width: 130px
