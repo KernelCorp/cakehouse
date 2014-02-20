@@ -12,20 +12,20 @@
             = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
           .input-wrap
             = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
-          .input-wrap#input-image
-            Загрузить фото
-            = f.file_field :photo, class: 'submit_button'
-          .input-wrap
-            .roundedTwo
-              %input#sale_order_customer_delivery#roundedTwo{type: 'checkbox',  name: 'cake_order[customer][delivery]'}
-              %label{for: "roundedTwo"}
-            %label.delivery
-              Хочу получать информация о новых акциях по email
-          .message-wrap{style: 'display: none'}
-            %p
-              Введите, пожалуйста, корректный email
-          .input-wrap{style: 'display: none'}
-            = f.text_field :stuff, type: 'text'
+        .input-wrap.select-wrap
+          = f.select :stuff, [ ['Тип торта', nil], 'Черёмуховый', 'Домашний', 'Ванильный', 'Медовый', 'Песочный', 'CakeHouse' ]
+        .input-wrap#input-image
+          Загрузить фото
+          = f.file_field :photo, class: 'submit_button'
+        .input-wrap
+          .roundedTwo
+            %input#sale_order_customer_delivery#roundedTwo{type: 'checkbox',  name: 'cake_order[customer][delivery]'}
+            %label{for: "roundedTwo"}
+          %label.delivery
+            Хочу получать информацию о новых акциях по email
+        .message-wrap{style: 'display: none'}
+          %p
+            Введите, пожалуйста, корректный email
         .button-wrap
           = f.submit class: 'submit_button', value: 'Заказать торт'
   #cake-order-success
