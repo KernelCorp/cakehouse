@@ -105,12 +105,29 @@
           %br
           С условиями и стомостью доставки можно ознакомиться в соответствующем
           =link_to 'разделе', delivery_path
-      #splitter-1
+      #splitter-2.mark
         .title
-          Начинки
+          Наши торты
+
+
+  %section#cake-slider
+    #cake-slider-mark.mark
+    #wrapper
+      #cake-slider-inner
+        - GalleryImage.all.each_slice(8) do |slice8|
+          .one-slide
+            - slice8.each_slice(4) do |slice4|
+              .pic-line
+                - slice4.each do |image|
+                  %img{src: image.attachment.url(:small)}
+    #splitter-1
+      .title
+        Начинки
 
   %section#fillings-block
     #fillings-block-mark.mark
+    #fillings-divider-top.divider
+    #fillings-divider-bot.divider
     .modal-shadow
     .modal-window
       = render :partial => 'modal_orders_content'
@@ -175,23 +192,6 @@
         .tort-order
           %a.order-cake{'data-stuff' => 'CakeHouse'}
             Заказать торт
-      #splitter-2.mark
-        .title
-          Наши торты
-
-  %section#cake-slider
-    #cake-slider-mark.mark
-    #cake-divider-top.divider
-    #cake-divider-bot.divider
-    #wrapper
-      #cake-slider-inner
-        - GalleryImage.all.each_slice(8) do |slice8|
-          .one-slide
-            - slice8.each_slice(4) do |slice4|
-              .pic-line
-                - slice4.each do |image|
-                  %img{src: image.attachment.url(:small)}
-
 
   %section#feedback-block
     #feedback-block-mark.mark

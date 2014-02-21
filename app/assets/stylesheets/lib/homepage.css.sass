@@ -199,13 +199,37 @@
     width: 254px
     background-image: url(/images/splitter-1.png)
     margin: 0 auto
+    margin-top: 57px
     .title
       padding-top: 63px
 
+  #splitter-2
+    position: relative
+    z-index: 10
+    height: 168px
+    width: 334px
+    background: url(/images/splitter-2.png) no-repeat right
+    margin: 0 auto
+    .title
+      padding-top: 53px
+      margin-left: 5px
+
   #fillings-block
     position: relative
-    height: 950px
-    background: url(/images/content-bg-2.png)
+    height: 1090px
+    background: url(/images/content-bg-1.png)
+    #fillings-divider-top
+      background: url(/images/dividers.png) 0 -145px
+      top: 0
+    #fillings-divider-bot
+      background: url(/images/curved-divider.png)
+      bottom: -9px
+      z-index: 5
+      height: 67px
+      box-shadow: none
+      -moz-box-shadow: none
+      -webkit-box-shadow: none
+
     #fillings
       width: 970px
       height: 100%
@@ -262,7 +286,7 @@
 
       #t-1
         background: url(/images/tort-bg-1.png) no-repeat center
-        margin: 85px 30px 20px 25px
+        margin: 145px 30px 20px 25px
         color: #ffffff
         a
           color: #ffffff
@@ -272,7 +296,7 @@
           background: #6f456b
       #t-2
         background: url(/images/tort-bg-2.png) no-repeat center
-        margin: 85px 0 20px 0
+        margin: 145px 0 20px 0
         color: #46171d
         a
           color: #edc4ec
@@ -338,30 +362,18 @@
         .tort-img
           background-position: -625px 0
 
-      #splitter-2
-        position: relative
-        z-index: 10
-        height: 168px
-        width: 334px
-        background: url(/images/splitter-2.png) no-repeat right
-        margin: 0 auto
-        .title
-          padding-top: 53px
-          margin-left: 5px
-
-
   #cake-slider
     position: relative
-    height: 610px
+    height: 560px
     width: 100%
-    background: url(/images/content-bg-1.png)
+    background: url(/images/content-bg-2.png)
 
     #cake-divider-top
       background: url(/images/dividers.png) 0 -145px
       top: 0
     #cake-divider-bot
       background: url(/images/curved-divider.png)
-      bottom: -9px
+      bottom: -13px
       z-index: 5
       height: 67px
       box-shadow: none
@@ -651,10 +663,10 @@
   top: -10px
   height: 690px
 #fillings-block-mark
-  top: -187px
+  top: -123px
   height: 950px
 #cake-slider-mark
-  top: -123px
+  top: -187px
 #feedback-block-mark
   top: -60px
 #events-block-mark
