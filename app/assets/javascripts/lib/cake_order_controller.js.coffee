@@ -55,9 +55,6 @@ class CakeOrderController
     $('.modal-shadow').hide('slow')
     $('.modal-window').hide('slow')
 
-
-
-
 ready = ->
   new CakeOrderController
   return

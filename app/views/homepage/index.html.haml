@@ -60,6 +60,34 @@
             Заказать торт
 
 #slider
+  -##slider-order
+  -#  #make-order
+  -#    Оставьте заявку
+  -#  #order-form-block
+  -#    = form_for CakeOrder.new, remote: true, html: {class: 'inputs', id: 'slider_cake_order'}, remote: true do |f|
+  -#      = f.fields_for :customer do |customer|
+  -#        .input-wrap
+  -#          = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
+  -#        .input-wrap
+  -#          = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+  -#        .input-wrap
+  -#          = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+  -#        .input-wrap.select-wrap
+  -#          = f.select :stuff, [ ['Тип торта', nil], 'Черёмуховый', 'Домашний', 'Ванильный', 'Медовый', 'Песочный', 'CakeHouse' ]
+  -#        .message-wrap{style: 'display: none', id: 'slider-order-error'}
+  -#          %p
+  -#            Введите, пожалуйста, корректный email
+  -#      .button-wrap
+  -#        = f.submit class: 'submit_button', value: 'Заказать торт'
+  -#  #cake-order-success
+  -#    #success-text
+  -#      Ваш заказ принят!
+  -#      %br
+  -#      В ближайшее время мы свяжемся с вами.
+  -#  #data-is-safe
+  -#    Ваши контактные данные в безопасности
+  -#    и не будут переданы третьим лицам'
+
   %ul.bxslider
     %li
       %img{src: '/images/main-slider-1.png'}
