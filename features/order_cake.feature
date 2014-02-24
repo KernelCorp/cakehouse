@@ -21,7 +21,7 @@ Feature: Order cake
      And I fill up input "phone" as "78901231234" in "cake" form
      And I click to "submit" in "cake" form
     Then I should see success for "cake"
-     And "admin@gmail.com" should receive an email
+     And "like@cakehouse.me" should receive an email
   @javascript
   Scenario Outline:
     When I order "Home" cake

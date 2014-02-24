@@ -24,7 +24,7 @@ And(/^I should see check box for "(.*?)" in "(.*?)" form$/) do |attr, klass|
 end
 
 And(/^I fill up input "(.*?)" as "(.*?)" in "(.*?)" form$/) do |attr, value, klass|
-  fill_in "#{klass}_order[customer][#{attr}]", with: value
+  fill_in "#{klass}_order_customer_#{attr}", with: value
 end
 
 And(/^I click to "(.*?)" in "(.*?)" form$/) do |attr, klass|

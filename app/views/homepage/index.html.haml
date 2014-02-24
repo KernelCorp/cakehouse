@@ -67,11 +67,11 @@
       = form_for CakeOrder.new, remote: true, html: {class: 'inputs', id: 'slider_cake_order'}, remote: true do |f|
         = f.fields_for :customer do |customer|
           .input-wrap
-            = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
+            = customer.text_field :name, type: 'text', placeholder: 'Ваше имя', id: 'slider_order_customer_name'
           .input-wrap
-            = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+            = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон', id: 'slider_order_customer_phone'
           .input-wrap
-            = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+            = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail', id: 'slider_order_customer_email'
           .message-wrap{style: 'display: none', id: 'slider-order-error'}
             %p
               Введите, пожалуйста, корректный email
