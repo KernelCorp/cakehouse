@@ -259,6 +259,11 @@
         .events-text
           = raw @sale.description
       #events-right>
+        #event-timer
+          #event-title
+            До конца акции осталось
+          #timer
+
         #make-order
           Оставьте заявку
         #order-form-block
@@ -336,4 +341,5 @@
             %li
               %a{href: page.href}
                 = page.title
+
 
