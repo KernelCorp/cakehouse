@@ -31,8 +31,8 @@ describe CakeOrdersController do
     it 'check mailer from and to' do
       post :create, cake_order: {customer: {email: 'new@mail.ru', phone: '222222', name: 'cake eater'}, stuff: 'some stuff'}
       mail = assigns :mail
-      mail.to.should == ['admin@gmail.com']
-      mail.from.should == ['admin@gmail.com']
+      mail.to.should == ['like@cakehouse.me']
+      mail.from.should == ['like@cakehouse.me']
     end
 
     it 'check mailer body' do
