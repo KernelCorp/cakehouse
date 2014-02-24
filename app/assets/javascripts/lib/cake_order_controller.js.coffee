@@ -34,8 +34,8 @@ class CakeOrderController
     return false
 
   @ajax_error: ()->
-    $('.message-wrap').show('slow')
-    $('.message-wrap').addClass('visible')
+    $('#cake-order-error').show('slow')
+    $('#cake-order-error').addClass('visible')
     return false
 
   show_popup: ->
@@ -47,8 +47,8 @@ class CakeOrderController
     $('.modal-window #order-form-block').show()
     $('#cake-order-success').hide('slow')
     $('#cake-order-success').removeClass('visible')
-    $('.message-wrap').hide('slow')
-    $('.message-wrap').removeClass('visible')
+    $('#cake-order-error').hide('slow')
+    $('#cake-order-error').removeClass('visible')
     $('#preview-block .preview').attr('src', '/images/placeholder_new_photo.png')
     return
   hide_popup: ->
