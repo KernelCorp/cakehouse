@@ -34,6 +34,7 @@ ready = ->
 
     offset: "25%"
 
+  #Workaround for contacts
   $(window).scroll ->
     if $(window).scrollTop() + $(window).height() is $(document).height()
       navigation_links.removeClass "active"
