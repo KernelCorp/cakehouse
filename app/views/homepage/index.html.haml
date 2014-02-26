@@ -140,7 +140,7 @@
     #cake-slider-mark.mark
     #wrapper
       #cake-slider-inner
-        - GalleryImage.all.each_slice(8) do |slice8|
+        - @cake_images.each_slice(8) do |slice8|
           .one-slide
             - slice8.each_slice(4) do |slice4|
               .pic-line
@@ -227,7 +227,7 @@
         Отзывы наших клиентов
       #feedback-line
       #feedback-slider
-        - Feedback.all.each_slice(3) do |slice|
+        - @feedbacks.each_slice(3) do |slice|
           .feeds-one-slide
             .feeds
               - slice.each do |feedback|
@@ -240,66 +240,65 @@
                     = feedback.desc
                   .feed-text
                     = raw feedback.text
-
-  %section#events-block.mark
-    - @sale = Sale.last
-    #events-block-mark.mark
-    #events-divider-bot.divider
-    #events
-      #events-logo>
-        .title
-          Акции
-      #events-pre>
-      #events-left>
-        .events-img-block
-          %img{src: @sale.photo.url(:for_main)}
-        .events-title
-          = @sale.name
-        .events-line
-        .events-text
-          = raw @sale.description
-      #events-right>
-        #event-timer
-          #event-title
-            До конца акции осталось
-          #timer
-          #timestamps
-            #hours.timestamp
-              часов
-            #mins.timestamp
-              минут
-            #secs.timestamp
-              секунд
-        #make-order
-          Оставьте заявку
-        #order-form-block
-          = form_for SaleOrder.new, remote: true, html: {class: 'inputs'}, remote: true do |f|
-            = f.fields_for :customer do |customer|
-              .input-wrap
-                = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
-              .input-wrap
-                = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
-              .input-wrap
-                = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
-              .input-wrap
-                .roundedTwo
-                  %input#sale-check{type: 'checkbox',  name: 'sale_order[customer][delivery]'}
-                  %label{for: "sale-check"}
-                %label.delivery
-                  Хочу получать информацию о новых акциях по email
-              .message-wrap{style: 'display: none'}
-                %p
-                  Введите, пожалуйста, корректный email
-            .button-wrap
-              = f.submit class: 'submit_button', value: 'Заказать торт'
-        #sale-order-success
-          #success-text
-            Ваш заказ принят!
-            %br
-            В ближайшее время мы свяжемся с вами.
-        #data-is-safe
-          Ваши контактные данные в безопасности
-          и не будут переданы третьим лицам
+  - if !@sale.nil?
+    %section#events-block.mark
+      #events-block-mark.mark
+      #events-divider-bot.divider
+      #events
+        #events-logo>
+          .title
+            Акции
+        #events-pre>
+        #events-left>
+          .events-img-block
+            %img{src: @sale.photo.url(:for_main)}
+          .events-title
+            = @sale.name
+          .events-line
+          .events-text
+            = raw @sale.description
+        #events-right>
+          #event-timer
+            #event-title
+              До конца акции осталось
+            #timer
+            #timestamps
+              #hours.timestamp
+                часов
+              #mins.timestamp
+                минут
+              #secs.timestamp
+                секунд
+          #make-order
+            Оставьте заявку
+          #order-form-block
+            = form_for SaleOrder.new, remote: true, html: {class: 'inputs'}, remote: true do |f|
+              = f.fields_for :customer do |customer|
+                .input-wrap
+                  = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
+                .input-wrap
+                  = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
+                .input-wrap
+                  = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
+                .input-wrap
+                  .roundedTwo
+                    %input#sale-check{type: 'checkbox',  name: 'sale_order[customer][delivery]'}
+                    %label{for: "sale-check"}
+                  %label.delivery
+                    Хочу получать информацию о новых акциях по email
+                .message-wrap{style: 'display: none'}
+                  %p
+                    Введите, пожалуйста, корректный email
+              .button-wrap
+                = f.submit class: 'submit_button', value: 'Заказать торт'
+          #sale-order-success
+            #success-text
+              Ваш заказ принят!
+              %br
+              В ближайшее время мы свяжемся с вами.
+          #data-is-safe
+            Ваши контактные данные в безопасности
+            и не будут переданы третьим лицам
 
 
   %section#map-block
