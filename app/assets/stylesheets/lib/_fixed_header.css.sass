@@ -7,7 +7,7 @@
   top: 0px
   .nav-container
     height: 100%
-    background: url(/images/nav-bg.png)
+    background: url(/images/nav-bg.jpg)
     z-index: 99999
     nav
       height: 100%
@@ -24,21 +24,38 @@
           text-align: center
           width: auto
           margin-top: 20px
-          margin-right: 55px
+          margin-right: 45px
           list-style: none
           a
             text-decoration: none
             font:
               family: HattoriHanzo
-              size: 30px
+              size: 24px
               weight: light
               style: normal
-            color: #ffffff
+            color: #3b3129
             border: none
             &:hover
               text-decoration: none
-              border-bottom: 2px solid #ffffff
+              border-bottom: 2px solid #3b3129
           a.active
-            color: #281a11
-            border-color: #281a11
+            color: #ffffff
+            border-color: #ffffff
 
+        li.order-item
+          height: 30px
+          width: 200px
+          background: #883921
+          border-radius: 15px
+          cursor: pointer
+          text-align: center
+          font-size: 24px
+          &:hover
+            text-decoration: underline
+          a.order-cake
+            display: block
+            height: 30px
+            border-radius: 15px
+            color: #ffffff
+            text-decoration: none
+            border: none

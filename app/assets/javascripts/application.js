@@ -14,6 +14,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require fancybox
+//= require jquery.plugin.js
+//= require jquery.countdown.js
 //= require_tree ./lib
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

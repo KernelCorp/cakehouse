@@ -4,21 +4,22 @@
       %nav
         %ul
           %li>
-            %a{href: '/#whatis-block'}
+            %a{href: '/#whatis-block-mark'}
               О нас
           %li>
-            %a{href: '/#fillings-block'}
-              Начинки
-          %li>
-            %a{href: '/#cake-slider'}
+            %a{href: '/#cake-slider-mark'}
               Наши торты
-          %li.logo>
-            %img{src: '/images/logo.png', alt: 'Cakehouse'}
           %li>
-            %a{href: '/#feedback-block'}
+            %a{href: '/#fillings-block-mark'}
+              Начинки
+          %li.logo>
+            %a{href: '/'}
+              %img{src: '/images/logo.png', alt: 'Cakehouse'}
+          %li>
+            %a{href: '/#feedback-block-mark'}
               Отзывы
           %li>
-            %a{href: '/#events-block'}
+            %a{href: '/#events-block-mark'}
               Акции
           %li>
             %a{href: '/#contacts-block'}
@@ -28,7 +29,8 @@
   #page-block
     #page-content
       .page-title
-        = @page.title
+        %h1
+          = @page.title
       .page-text
         = raw @page.body
 

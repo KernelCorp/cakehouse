@@ -1,6 +1,6 @@
 class SaleOrdersController < ApplicationController
   def create
-    customer = Customer.find_or_initialize_by_email email: params[:order][:customer][:email]
+    customer = Customer.find_or_initialize_by_email email: params[:sale_order][:customer][:email]
     if !customer.valid?
       head :unprocessable_entity
       return
@@ -9,7 +9,7 @@ class SaleOrdersController < ApplicationController
       head :unprocessable_entity
       return
     end
-    customer.update_attributes params[:order][:customer]
+    customer.update_attributes params[:sale_order][:customer]
     customer.save!
     @sale_order = SaleOrder.create!
     customer.sale_orders.push @sale_order

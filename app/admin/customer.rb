@@ -4,6 +4,7 @@ ActiveAdmin.register Customer do
       row :name
       row :email
       row :phone
+      row :delivery
       row :created_at
       row :updated_at
     end
@@ -16,6 +17,7 @@ ActiveAdmin.register Customer do
     end
     column :email
     column :phone
+    column :delivery
     column :created_at
     column :updated_at
     default_actions

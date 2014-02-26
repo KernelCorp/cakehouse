@@ -1,7 +1,7 @@
 #encoding: utf-8
 class AdminMailer < ActionMailer::Base
-  default from: "admin@gmail.com"
-  default to: "admin@gmail.com"
+  default from: "like@cakehouse.me"
+  default to: "like@cakehouse.me"
 
   def cake_order(customer, order)
     @customer = customer
