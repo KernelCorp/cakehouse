@@ -3,6 +3,10 @@ ready = ->
     pager: false
     infiniteLoop: false
     hideControlOnEnd: true
-    maxSlides: 1
+  )
+  $("#feedback-slider").bxSlider (
+    pager: false
+    infiniteLoop: false
+    hideControlOnEnd: true
   )
 $(document).ready ready
