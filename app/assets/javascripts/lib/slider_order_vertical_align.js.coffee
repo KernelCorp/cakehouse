@@ -4,7 +4,7 @@ resizing = ->
 
 resize = ->
   clearTimeout(id)
-  id = setTimeout(resizing,500)
+  id = setTimeout(resizing,100)
 
 ready = ->
   $(window).resize resize
