@@ -1,8 +1,6 @@
 #make-order
   %h3 Оставьте заявку
   #new-cake-form-block
-    #preview-block
-      %img.preview{src: '/images/placeholder_new_photo.png'}
     #order-form-block
       = form_for CakeOrder.new, remote: true, html: {class: 'inputs', multipart: true} do |f|
         = f.fields_for :customer do |customer|
@@ -10,14 +8,7 @@
             = customer.text_field :name, type: 'text', placeholder: 'Ваше имя'
           .input-wrap
             = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
-          .input-wrap
-            = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
-        .input-wrap.select-wrap
-          = f.select :stuff, [ ['Тип торта', nil], 'Черёмуховый', 'Домашний', 'Ванильный', 'Медовый', 'Песочный', 'CakeHouse' ]
-        .input-wrap#input-image
-          Загрузить фото
-          = f.file_field :photo, class: 'submit_button'
-        .input-wrap
+        #subscription-wrap
           .roundedTwo
             %input#sale_order_customer_delivery#roundedTwo{type: 'checkbox',  name: 'cake_order[customer][delivery]'}
             %label{for: "roundedTwo"}
@@ -25,7 +16,7 @@
             Хочу получать информацию о новых акциях по email
         .message-wrap{style: 'display: none', id: 'cake-order-error'}
           %p
-            Введите, пожалуйста, корректный email
+            Введите ваши данные, пожалуйста
         .button-wrap
           = f.submit class: 'submit_button', value: 'Заказать торт'
   #cake-order-success

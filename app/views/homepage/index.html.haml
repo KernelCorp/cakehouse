@@ -70,11 +70,9 @@
             = customer.text_field :name, type: 'text', placeholder: 'Ваше имя', id: 'slider_order_customer_name'
           .input-wrap
             = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон', id: 'slider_order_customer_phone'
-          .input-wrap
-            = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail', id: 'slider_order_customer_email'
           .message-wrap{style: 'display: none', id: 'slider-order-error'}
             %p
-              Введите, пожалуйста, корректный email
+              Введите ваши данные, пожалуйста
         .button-wrap
           = f.submit class: 'submit_button', value: 'Заказать торт'
     #slider-order-success
@@ -279,8 +277,6 @@
                 .input-wrap
                   = customer.text_field :phone, type: 'text', placeholder: 'Ваш телефон'
                 .input-wrap
-                  = customer.text_field :email, type: 'text', placeholder: 'Ваш e-mail'
-                .input-wrap
                   .roundedTwo
                     %input#sale-check{type: 'checkbox',  name: 'sale_order[customer][delivery]'}
                     %label{for: "sale-check"}
@@ -288,7 +284,7 @@
                     Хочу получать информацию о новых акциях по email
                 .message-wrap{style: 'display: none'}
                   %p
-                    Введите, пожалуйста, корректный email
+                    Введите ваши данные, пожалуйста
               .button-wrap
                 = f.submit class: 'submit_button', value: 'Заказать торт'
           #sale-order-success

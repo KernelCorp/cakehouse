@@ -1,0 +1,84 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "C:/RubyProjects/cakehouse/app/controllers/homepage_controller.rb": [
+        1,
+        null,
+        1,
+        11,
+        8,
+        8,
+        8,
+        null,
+        null,
+        null
+      ],
+      "C:/RubyProjects/cakehouse/app/controllers/cake_orders_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/RubyProjects/cakehouse/app/mailers/admin_mailer.rb": [
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/RubyProjects/cakehouse/app/controllers/sale_orders_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/RubyProjects/cakehouse/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        1,
+        2,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1401266154
+  }
+}

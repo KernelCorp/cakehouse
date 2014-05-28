@@ -14,6 +14,7 @@ Then(/^I should see that my email is bad$/) do
   page.should have_css('.message-wrap.visible')
 end
 
-And(/^I should see input for photo in cake form for cake$/) do
-  page.should have_css("#input-image")
-end
+#Removed functional
+#And(/^I should see input for photo in cake form for cake$/) do
+#  page.should have_css("#input-image")
+#end
