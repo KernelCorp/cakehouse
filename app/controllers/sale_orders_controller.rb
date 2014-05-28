@@ -1,6 +1,7 @@
 class SaleOrdersController < ApplicationController
   def create
-    customer = Customer.new params[:sale_order][:customer]
+    customer = Customer.find_or_initialize_by_phone phone: params[:sale_order][:customer][:phone]
+    customer.update_attributes params[:sale_order][:customer]
     if !customer.valid?
       head :unprocessable_entity
       return
