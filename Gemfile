@@ -29,7 +29,7 @@ group :assets do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.14.1'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_girl_rails'

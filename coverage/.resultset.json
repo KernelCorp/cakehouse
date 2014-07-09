@@ -83,74 +83,15 @@
   },
   "RSpec": {
     "coverage": {
-      "C:/RubyProjects/cakehouse/app/controllers/cake_orders_controller.rb": [
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "C:/RubyProjects/cakehouse/app/controllers/pages_controller.rb": [
+      "C:/Users/Mitya/Documents/cakehouse/app/controllers/pages_controller.rb": [
         1,
         1,
         1,
         3,
         null,
         null
-      ],
-      "C:/RubyProjects/cakehouse/app/controllers/sale_orders_controller.rb": [
-        1,
-        1,
-        5,
-        5,
-        5,
-        0,
-        0,
-        null,
-        5,
-        1,
-        1,
-        null,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        null,
-        null,
-        null
-      ],
-      "C:/RubyProjects/cakehouse/app/mailers/admin_mailer.rb": [
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        4,
-        4,
-        4,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1401270104
+    "timestamp": 1404880983
   }
 }
