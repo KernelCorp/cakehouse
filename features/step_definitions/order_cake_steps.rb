@@ -1,7 +1,7 @@
 When(/^I order "(.*?)" cake$/) do |cake_type|
   case cake_type
     when 'Cake House'
-       id = '#t-6'
+       id = '#t-1'
     when 'Home'
       id = '#t-2'
   end
