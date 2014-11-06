@@ -86,11 +86,11 @@
 
   #main-slider-inner
     .main-slide
-      %img{src: '/images/main-slider-1.jpg'}
+      = image_tag('ny-slider1.jpg')
     .main-slide.not_first_slide
-      %img{src: '/images/main-slider-2.jpg'}
+      = image_tag('ny-slider2.jpg')
     .main-slide.not_first_slide
-      %img{src: '/images/main-slider-3.jpg'}
+      = image_tag('ny-slider3.jpg')
 
 #content-container
 
@@ -159,11 +159,11 @@
       #t-1.tort-block>
         .tort-content>
           .tort-title
-            торт 'Черёмуховый'
+            торт 'CakeHouse'
           .tort-text
-            Бисквит из черемуховой муки с грецким орехом, пропитанный ванильным сиропом  с  ликером Малибу и взбитыми сливками.
+            Наш фирменный торт!<br>Тончайшие бисквитные коржи на основе сгущенного молока с нашим фирменным ванильным кремом.
         .tort-order
-          %a.order-cake{'data-stuff' => 'Черёмуховый'}
+          %a.order-cake{'data-stuff' => 'Cake-House'}
             Заказать торт
       #t-2.tort-block>
         .tort-content>
@@ -204,11 +204,38 @@
       #t-6.tort-block>
         .tort-content>
           .tort-title
-            торт 'CakeHouse'
+            торт 'Шоколад-малина'
           .tort-text
-            Наш фирменный торт!<br>Тончайшие бисквитные коржи на основе сгущенного молока с нашим фирменным ванильным кремом.
+            Три слоя шоколадного бисквита, пропитанного сиропом, и два вида крем-суфле: шоколад и малина.
         .tort-order
-          %a.order-cake{'data-stuff' => 'CakeHouse'}
+          %a.order-cake{'data-stuff' => 'Шоколад-малина'}
+            Заказать торт
+      #t-7.tort-block>
+        .tort-content>
+          .tort-title
+            торт 'Шоколад-манго'
+          .tort-text
+            Три слоя шоколадного бисквита, пропитанного сиропом, и два вида крем-суфле: шоколад и манго.
+        .tort-order
+          %a.order-cake{'data-stuff' => 'Шоколад-манго'}
+            Заказать торт
+      #t-8.tort-block>
+        .tort-content>
+          .tort-title
+            торт 'Лайм-клубника'
+          .tort-text
+            Три слоя ванильного бисквита, пропитанного сиропом, и два вида крем-суфле: лайм и клубника.
+        .tort-order
+          %a.order-cake{'data-stuff' => 'Лайм-клубника'}
+            Заказать торт
+      #t-9.tort-block>
+        .tort-content>
+          .tort-title
+            торт 'Тропические фрукты'
+          .tort-text
+            Ванильный бисквит, пропитанный домашним сиропом и крем-суфле из тропических фруктов.
+        .tort-order
+          %a.order-cake{'data-stuff' => 'Тропические фрукты'}
             Заказать торт
 
   %section#feedback-block
@@ -317,18 +344,18 @@
             %a{href: 'mailto:like@cakehouse.me'}
               like@cakehouse.me
         #social-icons
-          %a{href: 'http://vk.com/club60073728'}
+          %a{href: 'http://vk.com/club60073728', target: '_blank'}
             #icon-1.social-icon>
-          %a{href: 'http://instagram.com/cakehouseme'}
+          %a{href: 'http://instagram.com/cakehouseme', target: '_blank'}
             #icon-2.social-icon>
 
     #footer-block
       #footer
         #copyright
           © 2014 CakeHouse
-          разработано в
+          <br>
           %a{href: 'http://kerweb.ru', target: '_blank'}
-            Kernel Web
+            Студия разработки Kernel Web
         %ul
           - @menu.each do |page|
             %li

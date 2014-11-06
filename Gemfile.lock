@@ -171,8 +171,7 @@ GEM
     mini_portile (0.6.0)
     multi_json (1.10.1)
     multi_test (0.1.1)
-    mysql2 (0.3.11)
-    mysql2 (0.3.11-x86-mingw32)
+    mysql2 (0.3.16)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -323,7 +322,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.10)
   haml-rails
   jquery-rails
-  mysql2 (= 0.3.11)
+  mysql2 (= 0.3.16)
   net-ssh (~> 2.7.0)
   nginx-config
   paperclip (~> 3.5.2)
