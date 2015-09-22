@@ -62,8 +62,13 @@
 #slider
   #slider-order
     #make-order
-      Оставьте заявку
-    #order-form-block
+      Чтобы заказать торт,
+      %br звоните сейчас
+      %br
+      %a.button-wrap{href: 'tel:+79139394223'}
+        +7 913 939 42 23
+
+    -##order-form-block
       = form_for CakeOrder.new, remote: true, html: {class: 'inputs', id: 'slider_cake_order'}, remote: true do |f|
         = f.fields_for :customer do |customer|
           .input-wrap
@@ -75,22 +80,22 @@
               Введите ваши данные, пожалуйста
         .button-wrap
           = f.submit class: 'submit_button', value: 'Заказать торт'
-    #slider-order-success
+    -##slider-order-success
       #success-text
         Ваш заказ принят!
         %br
         В ближайшее время мы свяжемся с вами.
-    #data-is-safe
+    -##data-is-safe
       Ваши контактные данные в безопасности
       и не будут переданы третьим лицам'
 
   #main-slider-inner
     .main-slide
-      = image_tag('valentine-slider1.jpg')
-    .main-slide.not_first_slide
-      = image_tag('valentine-slider2.jpg')
-    .main-slide.not_first_slide
-      = image_tag('valentine-slider3.jpg')
+      = image_tag('aut_slider.jpg')
+    -#.main-slide.not_first_slide
+    -#  = image_tag('valentine-slider2.jpg')
+    -#.main-slide.not_first_slide
+    -#  = image_tag('valentine-slider3.jpg')
 
 #content-container
 
@@ -289,8 +294,15 @@
               #secs.timestamp
                 секунд
           #make-order
-            Оставьте заявку
-          #order-form-block
+            Чтобы заказать торт,
+            %br
+            оставьте заявку по телефону
+            %a.button-wrap{href: 'tel:+79139394223'}
+              +7 913 939 42 23
+
+
+
+          -##order-form-block
             = form_for SaleOrder.new, remote: true, html: {class: 'inputs'}, remote: true do |f|
               = f.fields_for :customer do |customer|
                 .input-wrap
@@ -352,7 +364,7 @@
     #footer-block
       #footer
         #copyright
-          © 2014 CakeHouse
+          © 2015 CakeHouse
           <br>
           %a{href: 'http://kerweb.ru', target: '_blank'}
             Студия разработки Kernel Web

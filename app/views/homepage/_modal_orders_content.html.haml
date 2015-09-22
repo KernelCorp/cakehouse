@@ -1,6 +1,9 @@
 #make-order
-  %h3 Оставьте заявку
-  #new-cake-form-block
+  %h3 Чтобы заказать торт,
+  %h3.last оставьте заявку по телефону
+  %a.button-wrap{href: 'tel:+79139394223'}
+    +7 913 939 42 23
+  -##new-cake-form-block
     #order-form-block
       = form_for CakeOrder.new, remote: true, html: {class: 'inputs', multipart: true} do |f|
         = f.fields_for :customer do |customer|
